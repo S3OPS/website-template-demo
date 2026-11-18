@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b0000">
+
+  <title>Service Three | Your Business Name | Your City</title>
+  <meta name="description" content="Service Three from Your Business Name in Your City: our premium package with everything included, priority scheduling, and an extended guarantee.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../assets/css/global.css">
+
+  <!-- Page-specific Styles -->
+  <style>
+    header {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #0a0a0a 100%);
+      padding: 18px 20px; position: sticky; top: 0; z-index: 999;
+      border-bottom: 2px solid #ff0033;
+      backdrop-filter: blur(12px) saturate(180%);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+    .nav-wrap { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    nav ul { list-style: none; display: flex; gap: 8px; padding: 0; margin: 0; flex-wrap: wrap; }
+    nav a {
+      color: #e6e6e6; text-decoration: none; padding: 10px 16px; border-radius: 6px;
+      background: linear-gradient(135deg, rgba(0, 20, 40, 0.8), rgba(10, 10, 10, 0.9));
+      border: 1px solid rgba(255, 0, 51, 0.25); transition: all 0.3s ease; font-weight: 600; font-size: 0.9rem;
+    }
+    nav a:hover { transform: translateY(-3px); box-shadow: 0 0 25px rgba(255, 0, 51, 0.35); border-color: rgba(255, 0, 51, 0.6); }
+
+    main{ max-width:1100px;margin:0 auto;padding:50px 20px; }
+    .breadcrumbs{ font-size:.85rem;color:#aaa;margin:0 0 18px; }
+    .breadcrumbs a{ color:#ffb3b3;text-decoration:none; }
+    .breadcrumbs a:hover{ text-decoration:underline; }
+
+    h1{ font-family:'Orbitron',sans-serif;font-size:2.4rem;margin:0 0 10px;letter-spacing:1px; text-shadow:0 0 18px rgba(255,0,0,.35); }
+    .lead{ max-width:80ch;color:#ccc;margin:0 0 22px;line-height:1.7; }
+    .service-photo{ width:100%;max-height:420px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,0,0,.25);margin:0 0 26px;display:block; }
+
+    .cta-row{ display:flex;gap:12px;flex-wrap:wrap;margin-top:18px; }
+    .btn{ display:inline-block;padding:14px 18px;border-radius:40px;text-decoration:none;font-weight:800;transition:all 0.3s ease; }
+    .btn.primary{ background:linear-gradient(135deg,#ff0033,#990011);color:#fff;box-shadow:0 0 30px rgba(255,0,0,.5); }
+    .btn.primary:hover{ transform:translateY(-3px); }
+    .btn.secondary{ background:transparent;color:#e6e6e6;border:1px solid rgba(255,0,0,.25); }
+    .btn.secondary:hover{ transform:translateY(-2px); }
+
+    .grid{ display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin:26px 0; }
+    .card{ background:linear-gradient(145deg,#111,#050505); border:1px solid rgba(255,0,0,.25); padding:26px;border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,0.3); transition:all 0.3s ease; }
+    .card:hover{ transform:translateY(-6px);border-color:rgba(255,0,0,.4); }
+    .badge{ display:inline-block;font-size:12px;padding:6px 10px;border-radius:999px; border:1px solid rgba(255,0,0,.25);color:#ffb3b3;margin-bottom:10px; }
+    h2{ font-family:'Orbitron',sans-serif;color:#ff3333;margin:0 0 12px;font-size:1.25rem;letter-spacing:.5px; }
+    p{ margin:0;color:#ccc;line-height:1.7; }
+    ul{ margin:12px 0 0;padding-left:18px;color:#bbb;line-height:1.8; }
+    .note{ margin-top:18px; color:#aaa; font-size:.95rem; line-height:1.7; }
+    footer{ background:#000;color:#777;text-align:center;padding:25px;font-size:.85rem;margin-top:40px; }
+
+    /* Photo gallery (click a photo to enlarge it) */
+    .gallery-section{ margin-top:44px; }
+    .gallery{ display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px; }
+    .gallery-item{ position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(255,0,0,.25);cursor:pointer; }
+    .gallery-item img{ width:100%;height:220px;object-fit:cover;display:block; }
+    .gallery-caption{ position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.88)); }
+    .gallery-caption h3{ margin:0;font-size:.95rem;color:#fff;font-family:'Inter',sans-serif; }
+    .small{ color:#999;font-size:.9rem; }
+
+    @media (max-width:520px){ h1{ font-size:2rem; } header{ padding:20px 14px; } }
+
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Service Three",
+    "areaServed":{"@type":"AdministrativeArea","name":"Your City"},
+    "provider":{"@type":"LocalBusiness","name":"Your Business Name"},
+    "serviceType":"Premium Package"
+  }
+  </script>
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+<header>
+  <div class="nav-wrap">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#mission-vision">Mission</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#capabilities">Why Us</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#how-it-works">How It Works</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <p class="breadcrumbs"><a href="../index.html">Home</a> / <a href="../index.html#services">Services</a> / Service Three</p>
+
+  <!-- TEMPLATE: replace images/service-3.jpg with a real photo of this service (same file name). -->
+  <img class="service-photo" src="../images/service-3.jpg" alt="Service Three — replace with a photo of your work" loading="lazy">
+
+  <h1>Service Three — Premium Package in Your City</h1>
+  <p class="lead">Your top-tier package for customers who want everything handled. Lead with the outcome — total peace of mind — then list everything that is included to deliver it.</p>
+
+  <div class="cta-row">
+    <a class="btn primary" href="../contact.html">Request a Free Estimate</a>
+    <a class="btn secondary" href="../index.html#services">View All Services</a>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Everything Included</h2>
+      <p>The premium bundle: every upgrade, add-on, and finishing touch in one package.</p>
+      <ul>
+        <li>Everything in the standard service</li>
+        <li>Premium materials or options</li>
+        <li>Extra detail work most packages skip</li>
+        <li>Final inspection with you present</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Priority Treatment</h2>
+      <p>What premium customers get that standard customers do not — speed, access, and attention.</p>
+      <ul>
+        <li>Priority scheduling, front of the line</li>
+        <li>A single point of contact</li>
+        <li>First access to seasonal openings</li>
+        <li>Faster response if anything comes up</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Extended Guarantee</h2>
+      <p>Describe the stronger guarantee this package carries, in plain terms.</p>
+      <ul>
+        <li>Longer guarantee period than standard work</li>
+        <li>Free return visit if something is not right</li>
+        <li>Guarantee in writing, not fine print</li>
+        <li>Transferable if you sell, where applicable</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>What You'll Receive</h2>
+    <ul>
+      <li>The complete premium service, start to finish</li>
+      <li>Premium materials and finishes throughout</li>
+      <li>A detailed summary of everything completed</li>
+      <li>Your extended guarantee certificate</li>
+      <li>Priority contact details for any follow-up</li>
+    </ul>
+
+    <p class="note">
+      <strong>Note:</strong> The premium package is priced as one bundle — most customers find it costs less than adding the same extras one by one. Ask for the comparison with your free estimate.
+    </p>
+  </div>
+
+  <!-- Photo Gallery Section — TEMPLATE: replace the photos in images/gallery/ (same file names)
+       and rewrite the six captions to describe your own work. -->
+  <section class="gallery-section">
+    <h2>Service Three Gallery</h2>
+    <p class="small">Recent work — click any photo to enlarge it.</p>
+
+    <div class="gallery">
+      <div class="gallery-item" data-lightbox>
+        <img src="../images/gallery/service-3-1.jpg" alt="Service Three — Finished result (replace with your photo)" loading="lazy">
+        <div class="gallery-caption">
+          <h3>Finished result</h3>
+        </div>
+      </div>
+      <div class="gallery-item" data-lightbox>
+        <img src="../images/gallery/service-3-2.jpg" alt="Service Three — During the work (replace with your photo)" loading="lazy">
+        <div class="gallery-caption">
+          <h3>During the work</h3>
+        </div>
+      </div>
+      <div class="gallery-item" data-lightbox>
+        <img src="../images/gallery/service-3-3.jpg" alt="Service Three — Detail view (replace with your photo)" loading="lazy">
+        <div class="gallery-caption">
+          <h3>Detail view</h3>
+        </div>
+      </div>
+      <div class="gallery-item" data-lightbox>
+        <img src="../images/gallery/service-3-4.jpg" alt="Service Three — Before we started (replace with your photo)" loading="lazy">
+        <div class="gallery-caption">
+          <h3>Before we started</h3>
+        </div>
+      </div>
+      <div class="gallery-item" data-lightbox>
+        <img src="../images/gallery/service-3-5.jpg" alt="Service Three — The finished job (replace with your photo)" loading="lazy">
+        <div class="gallery-caption">
+          <h3>The finished job</h3>
+        </div>
+      </div>
+      <div class="gallery-item" data-lightbox>
+        <img src="../images/gallery/service-3-6.jpg" alt="Service Three — Another happy customer (replace with your photo)" loading="lazy">
+        <div class="gallery-caption">
+          <h3>Another happy customer</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox for Gallery Images -->
+<div id="lightbox" aria-hidden="true">
+  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+</div>
+
+<footer>© 2026 Your Business Name • Your City, Your State</footer>
+  <!-- Main JavaScript -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
