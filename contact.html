@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b0000">
+
+  <title>Contact | Your Business Name | Your City</title>
+  <meta name="description" content="Contact Your Business Name in Your City. Request a free estimate for [your main service] — call (555) 123-4567 or send the form and we will reply within one business day.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+
+  <!-- Contact Page Styles -->
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <header>
+    <h1>Contact Your Business Name</h1>
+    <p>Request a free estimate — tell us what you need and we will reply within one business day. Prefer to talk? Call <strong>(555) 123-4567</strong> or email <strong>hello@yourbusiness.com</strong>.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#mission-vision">Mission</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#capabilities">Why Us</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#how-it-works">How It Works</a>
+    <a href="index.html#clients">Clients</a>
+  </nav>
+
+  <main id="main-content">
+  <section>
+    <h2>Request a Free Estimate</h2>
+    <p class="helper">
+      Fill out the form below. Include where the work is (city/area), what you need,
+      and any timeline. We will respond with a simple quote and availability.
+    </p>
+
+    <div class="card">
+      <!-- ============================================================================
+           TEMPLATE — MAKE THIS FORM WORK (takes about 5 minutes):
+           1. Go to formspree.io and create a free account.
+           2. Create a new form and copy its ID (it looks like "xabcdwxyz").
+           3. Replace YOUR_FORM_ID in the form action below with your ID.
+           Until you do this, the form will NOT send. Full steps are in the START HERE guide.
+           ============================================================================ -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="post" name="contact-form">
+        <input type="hidden" name="_subject" value="New Request — Your Business Name">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <label for="name">Name <abbr title="required">*</abbr></label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true">
+
+        <label for="email">Email Address <abbr title="required">*</abbr></label>
+        <input type="email" id="email" name="email" placeholder="email@example.com" required aria-required="true">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567 (optional)">
+
+        <label for="location">Where Is the Work? <abbr title="required">*</abbr></label>
+        <input type="text" id="location" name="location" placeholder="City / Area" required aria-required="true">
+
+        <label for="details">Project Details <abbr title="required">*</abbr></label>
+        <textarea id="details" name="details" rows="6" placeholder="Tell us what you need (which service, size/scope, timeline, any special requests)..." required aria-required="true"></textarea>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+  </section>
+  </main>
+
+  <footer>© 2026 Your Business Name • Your City, Your State</footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

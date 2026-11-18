@@ -1,0 +1,88 @@
+# Security Headers Configuration
+# Use this file with your hosting provider or server configuration
+
+# Prevent clickjacking attacks
+X-Frame-Options: DENY
+
+# Enable XSS protection
+X-Content-Type-Options: nosniff
+
+# XSS Filter
+X-XSS-Protection: 1; mode=block
+
+# Referrer Policy
+Referrer-Policy: strict-origin-when-cross-origin
+
+# Permissions Policy (formerly Feature Policy)
+Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+# Content Security Policy
+# Enhanced for ES6 module support and better security
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com https://formspree.io https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://youtube.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://plausible.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'
+
+# HSTS (HTTP Strict Transport Security)
+# Enable this when you have HTTPS configured
+# Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Additional Headers
+X-Powered-By: 
+Server:
+
+# Cache-Control Headers for Performance Optimization
+
+# Cache static assets for 1 year (immutable)
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages - short cache with revalidation
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Sitemap and robots
+/sitemap.xml
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=86400, must-revalidate
+
