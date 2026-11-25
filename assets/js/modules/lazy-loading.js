@@ -25,9 +25,13 @@ export const lazyLoading = {
   _initNativeLazyLoading() {
     const images = document.querySelectorAll('img[loading="lazy"]');
     images.forEach(img => {
-      img.addEventListener('load', function() {
-        this.classList.add('loaded');
-      }, { once: true, passive: true });
+      if (img.complete && img.naturalWidth > 0) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', function() {
+          this.classList.add('loaded');
+        }, { once: true, passive: true });
+      }
     });
   },
 
